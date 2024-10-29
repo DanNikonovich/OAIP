@@ -1,0 +1,137 @@
+object Form4: TForm4
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  Caption = #1058#1077#1089#1090#1086#1074#1099#1077' '#1079#1072#1076#1072#1085#1080#1103
+  ClientHeight = 480
+  ClientWidth = 640
+  Color = clBlack
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -20
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  TextHeight = 28
+  object Image2: TImage
+    Left = 42
+    Top = 127
+    Width = 65
+    Height = 65
+  end
+  object Image1: TImage
+    Left = 393
+    Top = 191
+    Width = 65
+    Height = 65
+  end
+  object Image3: TImage
+    Left = 234
+    Top = 214
+    Width = 65
+    Height = 65
+  end
+  object Image4: TImage
+    Left = 145
+    Top = 392
+    Width = 65
+    Height = 65
+  end
+  object Image5: TImage
+    Left = 313
+    Top = 407
+    Width = 65
+    Height = 65
+  end
+  object Image6: TImage
+    Left = 513
+    Top = 175
+    Width = 65
+    Height = 65
+  end
+  object Image7: TImage
+    Left = 26
+    Top = 223
+    Width = 65
+    Height = 65
+  end
+  object Image8: TImage
+    Left = 513
+    Top = 39
+    Width = 65
+    Height = 65
+  end
+  object Image9: TImage
+    Left = 130
+    Top = 87
+    Width = 65
+    Height = 65
+    OnClick = Image9Click
+  end
+  object Image10: TImage
+    Left = 170
+    Top = 304
+    Width = 65
+    Height = 65
+  end
+  object Image11: TImage
+    Left = 26
+    Top = 344
+    Width = 65
+    Height = 65
+  end
+  object Image12: TImage
+    Left = 393
+    Top = 304
+    Width = 65
+    Height = 65
+  end
+  object Image13: TImage
+    Left = 250
+    Top = 39
+    Width = 65
+    Height = 65
+  end
+  object Image14: TImage
+    Left = 362
+    Top = 95
+    Width = 65
+    Height = 65
+  end
+  object Image15: TImage
+    Left = 537
+    Top = 294
+    Width = 65
+    Height = 65
+  end
+  object Label1: TLabel
+    Left = 26
+    Top = 39
+    Width = 61
+    Height = 28
+    Caption = #1057#1095#1105#1090': 0'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -20
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
+  end
+  object BitBtn1: TBitBtn
+    Left = 433
+    Top = 408
+    Width = 169
+    Height = 49
+    Caption = '&'#1053#1072' '#1075#1083#1072#1074#1085#1091#1102
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -20
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Kind = bkClose
+    NumGlyphs = 2
+    ParentFont = False
+    TabOrder = 0
+  end
+end

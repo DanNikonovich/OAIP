@@ -1,0 +1,93 @@
+unit Unit4;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls,
+  Vcl.OleCtrls, SHDocVw;
+
+type
+  TForm4 = class(TForm)
+    Image2: TImage;
+    Image1: TImage;
+    Image3: TImage;
+    Image4: TImage;
+    Image5: TImage;
+    BitBtn1: TBitBtn;
+    Image6: TImage;
+    Image7: TImage;
+    Image8: TImage;
+    Image9: TImage;
+    Image10: TImage;
+    Image11: TImage;
+    Image12: TImage;
+    Image13: TImage;
+    Image14: TImage;
+    Image15: TImage;
+    Label1: TLabel;
+    procedure FormCreate(Sender: TObject);
+    function AskQ(num:integer) : boolean;
+    procedure Image9Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form4: TForm4;
+  balance:integer;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit1, Unit6;
+
+procedure TForm4.FormCreate(Sender: TObject);
+var
+  questionFile: TextFile;
+  question: string;
+  line: string;
+   AppPath: string;
+begin
+balance := 0;
+Image1.Picture.LoadFromFile(ExtractFilePath(ParamStr(0))+'image\1.bmp');
+Image2.Picture.LoadFromFile(ExtractFilePath(ParamStr(0))+'image\balance.bmp');
+Image3.Picture.LoadFromFile(ExtractFilePath(ParamStr(0))+'image\1.bmp');
+Image4.Picture.LoadFromFile(ExtractFilePath(ParamStr(0))+'image\1.bmp');
+Image5.Picture.LoadFromFile(ExtractFilePath(ParamStr(0))+'image\balance.bmp');
+Image6.Picture.LoadFromFile(ExtractFilePath(ParamStr(0))+'image\1.bmp');
+Image7.Picture.LoadFromFile(ExtractFilePath(ParamStr(0))+'image\1.bmp');
+Image8.Picture.LoadFromFile(ExtractFilePath(ParamStr(0))+'image\balance.bmp');
+Image9.Picture.LoadFromFile(ExtractFilePath(ParamStr(0))+'image\1.bmp');
+Image10.Picture.LoadFromFile(ExtractFilePath(ParamStr(0))+'image\1.bmp');
+Image11.Picture.LoadFromFile(ExtractFilePath(ParamStr(0))+'image\balance.bmp');
+Image12.Picture.LoadFromFile(ExtractFilePath(ParamStr(0))+'image\1.bmp');
+Image13.Picture.LoadFromFile(ExtractFilePath(ParamStr(0))+'image\1.bmp');
+Image14.Picture.LoadFromFile(ExtractFilePath(ParamStr(0))+'image\1.bmp');
+Image15.Picture.LoadFromFile(ExtractFilePath(ParamStr(0))+'image\balance.bmp');
+end;
+
+procedure TForm4.Image9Click(Sender: TObject);
+begin
+  var path := ExtractFilePath(ParamStr(0)) + 'image\';
+
+  if AskQ(1) then
+    path := path + '2.bmp'
+  else
+    path := path + '3.bmp';
+
+  image9.Picture.LoadFromFile(path);
+  image9.Enabled := false
+end;
+
+function Tform4.AskQ(num:integer) : boolean;
+begin
+  form6.setQ(num);
+  form6.ShowModal;
+  Result := unit6.res;
+end;
+
+end.
